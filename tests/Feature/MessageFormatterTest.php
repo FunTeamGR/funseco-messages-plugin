@@ -26,7 +26,7 @@ class MessageFormatterTest extends TestCase
 
     public function test_topic_token_sets_body_colour_and_style_override_applies(): void
     {
-        $this->assertSame(format_colors('{#music}x'), $this->f()->format(MessageType::Info, 'x', 'music'));
+        $this->assertSame(format_colors('{#orange_dark}x'), $this->f()->format(MessageType::Info, 'x', 'orange_dark'));
         $this->f()->styles()->set(MessageType::Info, 'prefix', '{#server}> ');
         $this->assertSame(format_colors('{#server}> {#message}x'), $this->f()->format(MessageType::Info, 'x'));
     }
